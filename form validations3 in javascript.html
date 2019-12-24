@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form name="form name" action="/login.jsp" method="post" onsubmit="return validateForm()">
+Name:<input type="text" name="t1"/>
+Password: <input type="password" name="t2"/>
+<input type="submit" value="Register">
+</form>
+<script>
+    function validateForm()
+    {
+
+        var name=document.forms["form name"]["t1"].value;
+        var password=document.forms["form name"]["t2"].value;
+        if (name==null || name=="")
+        {
+            alert("Name can't be blank");
+            return false;
+        }
+        else if(password.length<6)
+        {
+            alert("Password must be at least 6 characters long.");
+            return false;
+        }
+    }
+</script>
+</body>
+</html>
