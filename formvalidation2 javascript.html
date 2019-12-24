@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="t1"/>
+<input type="submit" value="submit" onclick="fun1()"/>
+<p id="p1"/> </p>
+
+<script>
+    function  fun1()
+    {
+        var x,text;
+        x=document.getElementById("t1").value;
+        if(isNaN(x) || x < 1 || x > 10)
+        {
+            text = "Input not valid";
+        }
+        else
+        {
+            text = "Input OK";
+        }
+        document.getElementById("p1").innerHTML=text;
+    }
+
+</script>
+</body>
+</html>
