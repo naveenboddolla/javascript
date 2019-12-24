@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<script>
+   function fun()
+  {
+      var x=document.forms["f name"]["t1"].value;
+      if (x == "") {
+          alert("name must be filled out");
+          return false;
+      }
+
+  }
+</script>
+</head>
+<body>
+<form  action="/login.jsp" name="f name" onsubmit="return fun()" method="post"/>
+ <input type="text" name="t1"/>
+<input type="submit" value="submit"/>
+</form>
+</body>
+</html>
